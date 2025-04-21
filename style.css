@@ -178,12 +178,14 @@ nav a:hover,
   width: 400px;
   height: 400px;
   aspect-ratio: 1 / 1;
-  position: relative;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 10px #4eddfd;
   background-color: #111;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
