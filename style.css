@@ -173,6 +173,7 @@ nav a:hover,
 .hero-img {
   width: 400px;
   height: 400px;
+  aspect-ratio: 1 / 1;
   background-color: transparent;
   position: relative;
   border-radius: 50%;
@@ -192,6 +193,7 @@ nav a:hover,
   height: 100%;
   object-fit: cover;
   mix-blend-mode: lighten;
+  border-radius: 50%; /* Ajouté ici pour arrondir l'image elle-même */
 }
 
 .info-sec {
