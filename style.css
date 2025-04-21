@@ -174,7 +174,6 @@ nav a:hover,
   width: 400px;
   height: 400px;
   aspect-ratio: 1 / 1;
-  background-color: transparent;
   position: relative;
   border-radius: 50%;
   display: flex;
@@ -182,6 +181,7 @@ nav a:hover,
   overflow: hidden;
   box-shadow: 0 0 10px #4eddfd;
   transition: 0.5s;
+  background-color: #111;
 }
 
 .hero-img:hover {
@@ -193,7 +193,8 @@ nav a:hover,
   height: 100%;
   object-fit: cover;
   mix-blend-mode: lighten;
-  border-radius: 50%; /* Ajouté ici pour arrondir l'image elle-même */
+  border-radius: 0; /* on va utiliser clip-path à la place */
+  clip-path: circle(50% at 50% 50%);
 }
 
 .info-sec {
