@@ -37,15 +37,19 @@ body {
   }
 }
 
-/* ========== Sections ========== */
-.main-section {
+/* ========== Shared Glass Background Style ========== */
+.section-glass {
+  background-color: #4ad0ee1b;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+  padding: 2rem;
   width: 90%;
   max-width: 1200px;
   margin: 30px auto;
-  background-color: #4ad0ee1b;
-  backdrop-filter: blur(10px);
-  border-radius: 50px;
-  box-shadow: 5px 5px 20px 1px #4acfee;
+  color: white;
+  transition: all 0.4s ease;
 }
 
 /* ========== Navigation ========== */
@@ -247,17 +251,6 @@ nav a:hover,
 }
 
 /* ========== Certifications Section ========== */
- .cert-section {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 20px;
-  margin: 30px auto;
-  width: 90%;
-  max-width: 1200px;
-  color: white;
-  box-shadow: 0 0 20px rgba(74, 207, 238, 0.3);
-}
-
 .cert-title-glow {
   text-align: center;
   font-size: 2.5rem;
@@ -311,7 +304,6 @@ nav a:hover,
   background: #1a1a1a;
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
   z-index: 2;
-  transition: all 0.5s ease;
 }
 
 /* Dimmed effect on unselected cards */
@@ -331,7 +323,7 @@ nav a:hover,
 }
 
 .cert-card.expanded .cert-detail {
-  max-height: 1000px; /* Enough space to show content */
+  max-height: 1000px;
   opacity: 1;
   transform: translateY(0);
 }
