@@ -465,6 +465,28 @@ nav a:hover,
 .skill-card:hover::before {
   left: 100%;
 }
+.subskills-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #53f8c9;
+  margin: 3rem 0 1rem;
+  text-shadow: 0 0 6px #4acfee, 0 0 12px #4acfee;
+  animation: glowIn 1.5s ease;
+}
+
+@keyframes glowIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    text-shadow: none;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 6px #4acfee, 0 0 12px #4acfee;
+  }
+}
+
 
 /* ========== Responsive Tweaks ========== */
 @media (min-width: 1220px) {
