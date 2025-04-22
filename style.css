@@ -465,8 +465,11 @@ nav a:hover,
 .skill-card:hover::before {
   left: 100%;
 }
+.linux-tools-section {
+  margin-top: 40px; /* Ajoute un bel espace vertical */
+}
+
 .subskills-title {
-  margin-top: 4rem; /* Tu peux ajuster ce chiffre pour plus ou moins d'espace */
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 700;
