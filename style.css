@@ -270,50 +270,65 @@ nav a:hover,
 .cert-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
 }
 
 .cert-card {
-  background-color: rgba(255, 255, 255, 0.05);
+  width: 300px;
+  background: #111;
+  color: #eee;
+  border: 1px solid #333;
+  border-radius: 1rem;
   padding: 1rem;
-  border-radius: 15px;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
-  width: 280px;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  position: relative;
   overflow: hidden;
 }
 
+/* Hover effect */
+.cert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  z-index: 1;
+}
+
+/* Clicked/expanded card */
 .cert-card.expanded {
   width: 60%;
   max-width: 800px;
-  flex: 1 1 100%;
-  position: relative;
+  background: #1a1a1a;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+  z-index: 2;
+  transition: all 0.4s ease;
 }
 
+/* Dimmed effect on unselected cards */
 .cert-card.dimmed {
   opacity: 0.3;
-  transform: scale(0.95);
+  pointer-events: none;
 }
 
+/* Certificate detail */
 .cert-detail {
-  display: none;
   margin-top: 1rem;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .cert-card.expanded .cert-detail {
   display: block;
+  opacity: 1;
 }
 
-.cert-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
+.cert-detail img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
 }
-
 
 /* ========== Responsive Tweaks ========== */
 @media (min-width: 1220px) {
