@@ -38,13 +38,15 @@ body {
 }
 
 /* ========== Shared Glass Background Style ========== */
-.main-section{
+.main-section {
   width: 90%;
   height: 90%;
-  background-color:#4ad0ee1b;
+  background-color: #4ad0ee1b;
   backdrop-filter: blur(10px);
   border-radius: 50px;
   box-shadow: 5px 5px 20px 1px #4acfee;
+  padding: 2rem;
+  margin: 2rem auto;
 }
 
 /* ========== Navigation ========== */
