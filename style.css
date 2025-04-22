@@ -312,22 +312,26 @@ nav a:hover,
 }
 
 /* Certificate detail */
+/* Add transition and animation for .cert-detail */
 .cert-detail {
   margin-top: 1rem;
-  display: none;
+  max-height: 0;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  transform: translateY(20px);
 }
 
 .cert-card.expanded .cert-detail {
-  display: block;
+  max-height: 1000px; /* large enough to show content */
   opacity: 1;
+  transform: translateY(0);
 }
 
-.cert-detail img {
-  max-width: 100%;
-  border-radius: 0.5rem;
-  margin-top: 0.5rem;
+/* Optional smoother transform for cert-card expand */
+.cert-card,
+.cert-card.expanded {
+  transition: all 0.5s ease;
 }
 
 /* ========== Responsive Tweaks ========== */
