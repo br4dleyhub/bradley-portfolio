@@ -571,6 +571,66 @@ nav a:hover,
   margin-right: 8px;
   color: #00ffc3;
 }
+.contact-cta {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin: 1rem 0 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.9rem 1.8rem;
+  border: 2px solid #4acfee;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #4acfee;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.contact-btn:hover {
+  background: #4acfee;
+  color: #000;
+  box-shadow: 0 0 15px #4acfee;
+  transform: translateY(-3px);
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /*===========================================================*/
 @keyframes fadeInType {
