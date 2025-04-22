@@ -330,6 +330,24 @@ nav a:hover,
   margin-top: 0.5rem;
 }
 
+/* ========== Diagonal Cross Animation ========== */
+@keyframes diagonalReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    opacity: 0;
+    transform: scale(0.95) rotate(-1deg);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.section-glass.diagonal-animate {
+  animation: diagonalReveal 1s ease-out forwards;
+}
+
 /* ========== Projects Section ========== */
 #projects {
   text-align: center;
@@ -343,39 +361,61 @@ nav a:hover,
 }
 
 .project-card {
-  background-color: #111;
-  color: white;
+  background-color: #0a0a0a;
+  color: #00ffcc;
   padding: 1.5rem;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(74, 207, 238, 0.2);
+  border: 1px solid #1affff44;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
   transition: all 0.4s ease;
   text-align: left;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(74, 207, 238, 0.5);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.4);
+  background-color: #101010;
 }
 
 .project-card h3 {
-  color: #4acfee;
+  color: #0ff;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 5px #00ffee;
 }
 
 .project-card p {
   font-size: 1rem;
   line-height: 1.5;
+  font-family: 'Courier New', monospace;
+  color: #ccffe0;
+}
+
+/* ========== Section Title with Glitch/Flicker ========== */
+.cert-title-glow {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ff99;
+  text-shadow: 0 0 2px #00ff99, 0 0 4px #00ff99, 0 0 6px #008f66;
+  margin-bottom: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+  animation: flicker 1.5s infinite alternate;
 }
 
 @keyframes flicker {
   0%, 100% { opacity: 1; }
-  33% { opacity: 0.95; }
-  66% { opacity: 0.85; }
+  33% { opacity: 0.9; }
+  66% { opacity: 0.75; }
 }
 
-.cert-title-glow {
-  animation: flicker 1.5s infinite alternate;
+/* ========== Trigger Animation with JS ========== */
+.diagonal-animate-hidden {
+  opacity: 0;
 }
 
 /* ========== Responsive Tweaks ========== */
