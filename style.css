@@ -304,30 +304,32 @@ nav a:hover,
 }
 
 .cert-card {
-  background-color: #4ad0ee1b;
-  backdrop-filter: blur(10px);
+  background-color: #0e1217;
   border: 1px solid #4acfee55;
-  border-radius: 25px;
-  padding: 20px;
-  box-shadow: 0 0 12px #4acfee33;
+  border-radius: 20px;
+  padding: 20px 25px;
+  box-shadow: 0 0 10px #4acfee33;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 150px;
+  min-width: 280px;
+  word-wrap: break-word;
 }
 
 .cert-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px #4acfee99;
+  box-shadow: 0 0 15px #4acfeeaa;
 }
 
 .cert-card h3 {
-  font-size: 22px;
+  font-size: 18px;
   color: #4acfee;
   margin-bottom: 10px;
 }
 
 .cert-card p {
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 5px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ffffff; /* Texte blanc pur */
 }
 
 }
