@@ -255,9 +255,11 @@ nav a:hover,
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 10px #4acfee, 0 0 20px #4acfee;
+  color: #00ff99;
+  text-shadow: 0 0 2px #00ff99, 0 0 4px #00ff99, 0 0 6px #008f66;
   margin-bottom: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
 }
 
 .cert-grid {
@@ -364,6 +366,16 @@ nav a:hover,
 .project-card p {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 0.95; }
+  66% { opacity: 0.85; }
+}
+
+.cert-title-glow {
+  animation: flicker 1.5s infinite alternate;
 }
 
 /* ========== Responsive Tweaks ========== */
