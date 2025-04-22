@@ -69,12 +69,17 @@
   <section id="certifications" class="main-section cert-section">
   <h2 data-aos="fade-up"><strong>Certifications</strong></h2>
   <div class="cert-grid">
-    <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="100" onclick="expandCard(this)">
       <h3>Commonwealth Bank</h3>
       <p><strong>Introduction to Cybersecurity</strong> — Apr 2025</p>
       <p>Skills: Penetration Testing</p>
       <p>Credential ID: 6M9AbsRbDwEmqfGps</p>
-    </div>
+
+      <!-- Hidden detail section -->
+  <div class="cert-detail">
+    <img src="images/mastercard-cert.jpg" alt="Certificate image">
+    <p>This certification covered real-world simulations of threat analysis, incident response, and vulnerability management in a simulated Mastercard environment.</p>
+  </div>
     
     <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
       <h3>Datacom</h3>
@@ -218,6 +223,29 @@
     }
   });
 </script>
+
+    <script>
+function expandCard(clickedCard) {
+  const allCards = document.querySelectorAll('.cert-card');
+
+  if (clickedCard.classList.contains('expanded')) {
+    allCards.forEach(card => {
+      card.classList.remove('collapsed', 'expanded');
+    });
+  } else {
+    allCards.forEach(card => {
+      if (card !== clickedCard) {
+        card.classList.add('collapsed');
+        card.classList.remove('expanded');
+      } else {
+        card.classList.add('expanded');
+        card.classList.remove('collapsed');
+      }
+    });
+  }
+}
+</script>
+
 </section>
 
   <section id="skills" class="main-section">
