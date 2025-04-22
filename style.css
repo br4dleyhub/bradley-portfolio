@@ -549,6 +549,30 @@ nav a:hover,
   text-shadow: 0 0 10px #4acfee, 0 0 20px #4acfee;
 }
 
+/*===============Contact=======================*/
+.contact-container {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 2.2;
+  margin-top: 1.5rem;
+}
+
+.contact-container a {
+  color: #4acfee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-container a:hover {
+  color: #00ffc3;
+}
+
+.contact-container i {
+  margin-right: 8px;
+  color: #00ffc3;
+}
+
+/*===========================================================*/
 @keyframes fadeInType {
   from {
     opacity: 0;
