@@ -1,3 +1,4 @@
+/* ========== Reset & Base Styles ========== */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@ body {
   background-color: #000;
 }
 
+/* ========== Background Video ========== */
 .back-vid {
   position: absolute;
   left: 0;
@@ -35,6 +37,7 @@ body {
   }
 }
 
+/* ========== Sections ========== */
 .main-section {
   width: 90%;
   max-width: 1200px;
@@ -45,6 +48,7 @@ body {
   box-shadow: 5px 5px 20px 1px #4acfee;
 }
 
+/* ========== Navigation ========== */
 nav {
   display: flex;
   justify-content: space-between;
@@ -78,6 +82,7 @@ nav a:hover,
   text-decoration: underline;
 }
 
+/* ========== Hero Section ========== */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -121,6 +126,7 @@ nav a:hover,
   }
 }
 
+/* ========== Buttons ========== */
 .Buttons {
   display: flex;
   flex-wrap: wrap;
@@ -148,6 +154,7 @@ nav a:hover,
   color: #4acfee;
 }
 
+/* ========== Social Icons ========== */
 .ul-icons {
   display: flex;
   align-items: center;
@@ -176,6 +183,7 @@ nav a:hover,
   box-shadow: 0 0 10px #4acfee;
 }
 
+/* ========== Hero Image ========== */
 .hero-img {
   flex: 0 0 400px;
   width: 400px;
@@ -204,6 +212,7 @@ nav a:hover,
   mix-blend-mode: lighten;
 }
 
+/* ========== Info Section ========== */
 .info-sec {
   display: flex;
   width: 100%;
@@ -237,14 +246,45 @@ nav a:hover,
   font-size: 20px;
 }
 
-/* Desktop Tweaks */
+/* ========== Certifications Section ========== */
+.cert-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 15px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cert-card h3 {
+  color: #4acfee;
+}
+
+.cert-card p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* ========== Responsive Tweaks ========== */
 @media (min-width: 1220px) {
   .info-sec {
     margin-top: 30px;
   }
 }
 
-/* Tablet & Mobile */
 @media (max-width: 980px) {
   nav ul {
     display: none;
@@ -265,7 +305,6 @@ nav a:hover,
   }
 }
 
-/* Small screens */
 @media (max-width: 440px) {
   .hero-img {
     width: 300px;
@@ -279,35 +318,4 @@ nav a:hover,
   .info-sec h1 {
     font-size: 40px;
   }
-
-  .cert-section {
-  background-color: rgba(0, 0, 0, 0.6); /* Slight dark overlay for readability */
-  padding: 2rem;
-  border-radius: 20px;
-}
-
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.cert-card {
-  background-color: rgba(255, 255, 255, 0.05); /* Subtle glass-like card */
-  padding: 1rem;
-  border-radius: 15px;
-  color: #ffffff; /* Light text for visibility */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.cert-card h3 {
-  color: #4acfee; /* Accent heading color */
-}
-
-.cert-card p {
-  color: #e0e0e0;
-  font-size: 0.95rem;
-}
-
 }
