@@ -190,6 +190,34 @@
     }
   });
 </script>
+
+    <script>
+  const cards = document.querySelectorAll(".cert-card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const isOpen = card.classList.contains("open");
+
+      cards.forEach((c) => {
+        c.classList.remove("open", "dimmed");
+      });
+
+      if (!isOpen) {
+        card.classList.add("open");
+        cards.forEach((c) => {
+          if (c !== card) c.classList.add("dimmed");
+        });
+      }
+    });
+  });
+
+  // Optional: close any open card by clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".cert-card")) {
+      cards.forEach((c) => c.classList.remove("open", "dimmed"));
+    }
+  });
+</script>
 </section>
 
   <section id="skills" class="main-section">
