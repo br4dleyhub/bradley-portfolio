@@ -267,6 +267,25 @@
     }
   }
 
+    <script>
+  // Visibility on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  document.querySelectorAll('.cert-card').forEach(card => {
+    observer.observe(card);
+  });
+
+
   // Collapse cards on outside click
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.cert-card')) {
