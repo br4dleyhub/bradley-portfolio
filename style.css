@@ -472,6 +472,50 @@ nav a:hover,
   animation: glowIn 1.5s ease;
 }
 
+.skills-title.typing-console {
+  font-size: 2.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #4af3e2;
+  text-align: center;
+  margin-top: 4rem;
+  text-shadow: 0 0 10px #4af3e2, 0 0 20px rgba(74, 243, 226, 0.6);
+  letter-spacing: 1px;
+  animation: fadeInType 2s ease forwards;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.skills-title.typing-console .cursor {
+  display: inline-block;
+  background-color: #4af3e2;
+  width: 8px;
+  height: 1.5rem;
+  margin-left: 8px;
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: bottom;
+  border-radius: 2px;
+}
+
+@keyframes fadeInType {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
 @keyframes glowIn {
   from {
     opacity: 0;
