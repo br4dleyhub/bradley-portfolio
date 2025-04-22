@@ -247,7 +247,7 @@ nav a:hover,
 }
 
 /* ========== Certifications Section ========== */
-  .cert-section {
+ .cert-section {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 20px;
@@ -268,9 +268,10 @@ nav a:hover,
 }
 
 .cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .cert-card {
@@ -280,26 +281,27 @@ nav a:hover,
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  width: 280px;
   cursor: pointer;
-  position: relative;
   overflow: hidden;
 }
 
-.cert-card h3 {
-  color: #4acfee;
+.cert-card.expanded {
+  width: 60%;
+  max-width: 800px;
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.cert-card.dimmed {
+  opacity: 0.3;
+  transform: scale(0.95);
 }
 
 .cert-detail {
   display: none;
   margin-top: 1rem;
-}
-
-.cert-card.expanded {
-  grid-column: span 2;
-  width: 60%;
-  margin: 0 auto;
-  z-index: 2;
 }
 
 .cert-card.expanded .cert-detail {
