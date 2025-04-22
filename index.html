@@ -224,26 +224,19 @@
   });
 </script>
 
-    <script>
-function expandCard(clickedCard) {
-  const allCards = document.querySelectorAll('.cert-card');
+   <script>
+  function expandCard(card) {
+    const allCards = document.querySelectorAll(".cert-card");
+    const isExpanded = card.classList.contains("expanded");
 
-  if (clickedCard.classList.contains('expanded')) {
-    allCards.forEach(card => {
-      card.classList.remove('collapsed', 'expanded');
+    allCards.forEach(c => {
+      c.classList.remove("expanded");
     });
-  } else {
-    allCards.forEach(card => {
-      if (card !== clickedCard) {
-        card.classList.add('collapsed');
-        card.classList.remove('expanded');
-      } else {
-        card.classList.add('expanded');
-        card.classList.remove('collapsed');
-      }
-    });
+
+    if (!isExpanded) {
+      card.classList.add("expanded");
+    }
   }
-}
 </script>
 
 </section>
