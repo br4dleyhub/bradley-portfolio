@@ -281,11 +281,20 @@ nav a:hover,
   border: 1px solid #333;
   border-radius: 1rem;
   padding: 1rem;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+
+  /* Scroll-in animation base */
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.cert-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Hover effect */
@@ -302,7 +311,7 @@ nav a:hover,
   background: #1a1a1a;
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
   z-index: 2;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
 }
 
 /* Dimmed effect on unselected cards */
@@ -312,7 +321,6 @@ nav a:hover,
 }
 
 /* Certificate detail */
-/* Add transition and animation for .cert-detail */
 .cert-detail {
   margin-top: 1rem;
   max-height: 0;
@@ -323,15 +331,16 @@ nav a:hover,
 }
 
 .cert-card.expanded .cert-detail {
-  max-height: 1000px; /* large enough to show content */
+  max-height: 1000px; /* Enough space to show content */
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Optional smoother transform for cert-card expand */
-.cert-card,
-.cert-card.expanded {
-  transition: all 0.5s ease;
+/* Certificate image */
+.cert-detail img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 /* ========== Responsive Tweaks ========== */
