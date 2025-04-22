@@ -496,6 +496,59 @@ nav a:hover,
   border-radius: 2px;
 }
 
+/*=================Platforms=================*/
+#platforms {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.platform-card {
+  background: radial-gradient(circle at top left, #1c1c1c, #000);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #4acfee33;
+  box-shadow: 0 0 15px rgba(74, 207, 238, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: left;
+  position: relative;
+}
+
+.platform-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(74, 207, 238, 0.4);
+}
+
+.platform-card h3 {
+  color: #4acfee;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.platform-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.platform-card a {
+  color: #53f8c9;
+  text-decoration: underline;
+}
+
+.section-glow-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #4acfee, 0 0 20px #4acfee;
+}
+
 @keyframes fadeInType {
   from {
     opacity: 0;
