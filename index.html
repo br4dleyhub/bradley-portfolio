@@ -243,6 +243,7 @@
 
   <!-- Script to handle card expansion -->
   <script>
+  // Expand or collapse certification card
   function expandCard(clickedCard) {
     const allCards = document.querySelectorAll('.cert-card');
     const isExpanded = clickedCard.classList.contains('expanded');
@@ -257,7 +258,7 @@
         if (card !== clickedCard) card.classList.add('dimmed');
       });
 
-      // Delay scrolling slightly to ensure transition starts
+      // Scroll into view
       setTimeout(() => {
         clickedCard.scrollIntoView({
           behavior: 'smooth',
@@ -267,8 +268,7 @@
     }
   }
 
-    <script>
-  // Visibility on scroll
+  // Intersection Observer for scroll animation
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -281,12 +281,12 @@
     threshold: 0.15
   });
 
+  // Observe all cert cards
   document.querySelectorAll('.cert-card').forEach(card => {
     observer.observe(card);
   });
 
-
-  // Collapse cards on outside click
+  // Collapse on outside click
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.cert-card')) {
       document.querySelectorAll('.cert-card').forEach(card => {
