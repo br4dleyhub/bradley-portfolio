@@ -278,6 +278,15 @@ nav a:hover,
   font-size: 0.95rem;
 }
 
+.cert-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
 /* ========== Responsive Tweaks ========== */
 @media (min-width: 1220px) {
   .info-sec {
