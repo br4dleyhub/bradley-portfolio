@@ -247,8 +247,7 @@ nav a:hover,
 }
 
 /* ========== Certifications Section ========== */
-/* ========== Certifications Section ========== */
-.cert-section {
+  .cert-section {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 3rem 2rem;
   border-radius: 30px;
@@ -256,22 +255,24 @@ nav a:hover,
   max-width: 1200px;
   box-shadow: 0 0 30px rgba(74, 207, 238, 0.2);
   overflow: hidden;
+  text-align: center;
 }
 
 .cert-section h2 {
-  color: #ffffff;
+  color: white;
   font-size: 2.8rem;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   text-shadow: 0 0 10px #4acfee, 0 0 20px #4acfee, 0 0 30px #4acfee;
 }
 
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  transition: all 0.3s ease-in-out;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .cert-card {
@@ -283,7 +284,6 @@ nav a:hover,
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease;
   cursor: pointer;
-  overflow: hidden;
   transform-origin: center;
 }
 
@@ -298,7 +298,6 @@ nav a:hover,
   margin-top: 0.2rem;
 }
 
-/* Expanded + dimmed logic */
 .cert-card.open {
   transform: scale(1.05);
   z-index: 10;
