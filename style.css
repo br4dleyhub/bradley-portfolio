@@ -466,10 +466,11 @@ nav a:hover,
   left: 100%;
 }
 .subskills-title {
+  margin-top: 4rem; /* Tu peux ajuster ce chiffre pour plus ou moins d'espace */
+  margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 700;
   color: #53f8c9;
-  margin: 3rem 0 1rem;
   text-shadow: 0 0 6px #4acfee, 0 0 12px #4acfee;
   animation: glowIn 1.5s ease;
 }
