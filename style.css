@@ -308,7 +308,7 @@ nav a:hover,
 .cert-card.dimmed {
   opacity: 0.3;
   transform: scale(0.95);
-  filter: blur(1px);
+  filter: blur(3px);
   pointer-events: none;
 }
 
