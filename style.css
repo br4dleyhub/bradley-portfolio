@@ -247,41 +247,71 @@ nav a:hover,
 }
 
 /* ========== Certifications Section ========== */
+/* ========== Certifications Section ========== */
+.cert-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3rem 2rem;
+  border-radius: 30px;
+  margin: 50px auto;
+  max-width: 1200px;
+  box-shadow: 0 0 30px rgba(74, 207, 238, 0.2);
+  overflow: hidden;
+}
+
+.cert-section h2 {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px #4acfee, 0 0 20px #4acfee, 0 0 30px #4acfee;
+}
+
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   transition: all 0.3s ease-in-out;
 }
 
 .cert-card {
   background-color: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 15px;
+  padding: 1.5rem;
+  border-radius: 20px;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease;
-  transform: scale(1);
-  opacity: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transform-origin: center;
 }
 
+.cert-card h3 {
+  color: #4acfee;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+/* Expanded + dimmed logic */
 .cert-card.open {
-  grid-column: 1 / -1;
   transform: scale(1.05);
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 25px #4acfee;
 }
 
-.cert-card:not(.open).dimmed {
-  transform: scale(0.9);
-  opacity: 0.4;
+.cert-card.dimmed {
+  opacity: 0.3;
+  transform: scale(0.95);
   filter: blur(1px);
   pointer-events: none;
 }
-
 
 /* ========== Responsive Tweaks ========== */
 @media (min-width: 1220px) {
