@@ -38,7 +38,7 @@ body {
 .main-section {
   width: 90%;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 30px auto;
   background-color: #4ad0ee1b;
   backdrop-filter: blur(10px);
   border-radius: 50px;
@@ -207,7 +207,7 @@ nav a:hover,
 .info-sec {
   display: flex;
   width: 100%;
-  gap: 15px;
+  gap: 20px;
   padding: 0 10%;
   flex-wrap: wrap;
   justify-content: space-between;
