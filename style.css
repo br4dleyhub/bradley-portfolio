@@ -604,6 +604,25 @@ nav a:hover,
   box-shadow: 0 0 15px #4acfee;
   transform: translateY(-3px);
 }
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00fff7;
+  text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+  margin-bottom: 1rem;
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+  }
+  100% {
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 40px #00fff7;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
