@@ -326,92 +326,86 @@ nav a:hover,
 }
 
 /* ========== Projects Section ========== */
+/* PROJECTS - Futuristic as hell */
 #projects {
   text-align: center;
-  padding: 4rem 2rem;
-  background: radial-gradient(circle at top, #0d1117 0%, #05080f 100%);
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(145deg, #0d1117, #1a1f2b);
+  padding: 5rem 2rem;
+  border-top: 1px solid rgba(74, 207, 238, 0.2);
+  border-bottom: 1px solid rgba(74, 207, 238, 0.2);
+  box-shadow: inset 0 0 40px rgba(74, 207, 238, 0.05);
+}
+
+.section-glow-title {
+  font-size: 2.5rem;
+  color: #4acfee;
+  text-shadow: 0 0 8px #4acfee, 0 0 20px #007bff;
+  margin-bottom: 3rem;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 8px #4acfee, 0 0 20px #007bff; }
+  50% { text-shadow: 0 0 12px #00bfff, 0 0 30px #00bfff; }
 }
 
 .projects-grid-futuristic {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
-  margin-top: 3rem;
-  position: relative;
-  z-index: 1;
 }
 
 .project-card-futuristic {
-  background: rgba(10, 25, 47, 0.85);
-  color: #dffbff;
-  padding: 2rem;
+  background: rgba(10, 20, 35, 0.7);
+  border: 1px solid rgba(74, 207, 238, 0.2);
   border-radius: 20px;
-  border: 1px solid rgba(100, 255, 218, 0.15);
-  box-shadow: 0 0 25px rgba(100, 255, 218, 0.1);
-  backdrop-filter: blur(12px);
+  padding: 2rem;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(74, 207, 238, 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  text-align: left;
+  backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
 }
 
-.project-card-futuristic:hover {
-  transform: scale(1.03) translateY(-5px);
-  box-shadow: 0 0 40px rgba(100, 255, 218, 0.4);
-}
-
 .project-card-futuristic::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(from 0deg, transparent, rgba(100, 255, 218, 0.05), transparent);
-  animation: futuristicGlow 10s linear infinite;
-  z-index: -1;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent);
+  animation: rotateGlow 6s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .project-card-futuristic h3 {
-  color: #64ffda;
+  color: #4acfee;
   font-size: 1.5rem;
-  margin-bottom: 0.6rem;
-  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card-futuristic p {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #c8faff;
+  line-height: 1.5;
+  color: #ccc;
+  position: relative;
+  z-index: 1;
 }
 
-.section-glow-title {
-  font-size: 2.7rem;
-  color: #53f8c9;
-  text-shadow: 0 0 10px #4acfee, 0 0 25px #4acfee;
-  animation: glowTitle 3s ease-in-out infinite alternate;
-  letter-spacing: 1.5px;
+.project-card-futuristic:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 35px rgba(74, 207, 238, 0.6);
 }
 
-@keyframes glowTitle {
-  0% {
-    text-shadow: 0 0 5px #4acfee, 0 0 10px #4acfee;
-  }
-  100% {
-    text-shadow: 0 0 20px #4acfee, 0 0 40px #4acfee;
-  }
-}
-
-@keyframes futuristicGlow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /* ========== Skills sections ========== */
 .skill-card {
