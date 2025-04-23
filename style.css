@@ -429,14 +429,18 @@ nav a:hover,
 }
 
 .skills-title.typing-console {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-family: 'Courier New', Courier, monospace;
-  color: #4af3e2;
+  color: #00fff7;
   text-align: center;
   margin-top: 4rem;
-  text-shadow: 0 0 10px #4af3e2, 0 0 20px rgba(74, 243, 226, 0.6);
   letter-spacing: 1px;
-  animation: fadeInType 2s ease forwards;
+  text-shadow:
+    0 0 5px #00fff7,
+    0 0 10px #00fff7,
+    0 0 20px #00fff7,
+    0 0 40px rgba(0, 255, 247, 0.5);
+  animation: glowSkills 2.5s infinite alternate ease-in-out, fadeInType 2s ease forwards;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -450,6 +454,22 @@ nav a:hover,
   animation: blink 0.7s steps(1) infinite;
   vertical-align: bottom;
   border-radius: 2px;
+}
+@keyframes glowSkills {
+  0% {
+    text-shadow:
+      0 0 5px #00fff7,
+      0 0 10px #00fff7,
+      0 0 20px #00fff7,
+      0 0 30px rgba(0, 255, 247, 0.3);
+  }
+  100% {
+    text-shadow:
+      0 0 10px #00fff7,
+      0 0 20px #00fff7,
+      0 0 30px #00fff7,
+      0 0 50px rgba(0, 255, 247, 0.6);
+  }
 }
 
 /*=================Platforms=================*/
